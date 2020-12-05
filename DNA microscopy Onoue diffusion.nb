@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18899,        489]
-NotebookOptionsPosition[     18340,        472]
-NotebookOutlinePosition[     18750,        489]
-CellTagsIndexPosition[     18707,        486]
+NotebookDataLength[     21127,        538]
+NotebookOptionsPosition[     20527,        520]
+NotebookOutlinePosition[     20977,        538]
+CellTagsIndexPosition[     20934,        535]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,11 +21,11 @@ Notebook[{
 Cell[BoxData[{
  RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"n", "=", "2"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"n", "=", "5"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"L", "=", "10"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Tf", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"Tf", "=", "1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"kr", "=", "1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -203,11 +203,11 @@ Cell[BoxData[{
               RowBox[{"L", "/", "20"}], ")"}], "^", "2"}]}], "]"}]}]}], "}"}],
         ",", 
        RowBox[{"{", 
-        RowBox[{"i", ",", "n"}], "}"}]}], "]"}]}]}], ";"}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"i", ",", "n"}], "}"}]}], "]"}]}]}], ";"}], "\n", 
+  "\[IndentingNewLine]", 
   RowBox[{
   "(*", "\:53cd\:5fdc\:7269\:306e\:91cf\:3092\:6c42\:3081\:308b\:5fae\:5206\
-\:65b9\:7a0b\:5f0f\:3092\:89e3\:304f", "*)"}]}], "\n", 
+\:65b9\:7a0b\:5f0f\:3092\:89e3\:304f", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"eqnAB", "=", 
    RowBox[{"Flatten", "@", 
@@ -296,8 +296,14 @@ Cell[BoxData[{
    3.8161256235682783`*^9, 3.816125660654325*^9}, {3.8161257262229347`*^9, 
    3.816125733237974*^9}, {3.81612689126941*^9, 3.8161269022304077`*^9}, {
    3.8161307699790297`*^9, 3.8161308006904793`*^9}, {3.81613148677884*^9, 
-   3.8161314875275307`*^9}},
- CellLabel->"In[77]:=",ExpressionUUID->"8c050eab-a361-4c30-b83f-5d61b0deb8a6"],
+   3.8161314875275307`*^9}, {3.8161406068558483`*^9, 
+   3.8161406084972477`*^9}, {3.816140938055244*^9, 3.816140966722289*^9}, {
+   3.816141715356711*^9, 3.816141715783655*^9}, {3.816142201624268*^9, 
+   3.816142202328714*^9}, {3.81614228080751*^9, 3.816142281069541*^9}, {
+   3.8161436708204527`*^9, 3.816143672808302*^9}, 3.816143754659984*^9, 
+   3.816144206055799*^9, 3.8161442614382877`*^9, {3.8161443063607693`*^9, 
+   3.81614430926551*^9}},ExpressionUUID->"8c050eab-a361-4c30-b83f-\
+5d61b0deb8a6"],
 
 Cell[BoxData[{
  RowBox[{
@@ -389,89 +395,132 @@ Cell[BoxData[{
  CellChangeTimes->{{3.816063445554837*^9, 3.8160634601627197`*^9}, {
   3.816063757113195*^9, 3.816063766569207*^9}, {3.816130822036026*^9, 
   3.81613082608881*^9}, {3.816131499880422*^9, 3.816131505886392*^9}},
- CellLabel->"In[87]:=",ExpressionUUID->"a42fd996-3582-4090-93f9-f9a43ab0f75c"],
+ CellLabel->
+  "In[177]:=",ExpressionUUID->"a42fd996-3582-4090-93f9-f9a43ab0f75c"],
 
 Cell[BoxData[
- RowBox[{"\[IndentingNewLine]", 
-  RowBox[{"ListAnimate", "@", 
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"Show", "@@", 
-      RowBox[{"{", 
+ RowBox[{"ListAnimate", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{"time", ",", "\[IndentingNewLine]", 
+      RowBox[{"Show", "@@", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"DensityPlot", "[", 
+          RowBox[{
+           RowBox[{"Sum", "[", 
+            RowBox[{
+             RowBox[{"First", "[", 
+              RowBox[{
+               RowBox[{
+                SubscriptBox["A", "i"], "[", 
+                RowBox[{"x", ",", "y", ",", "time"}], "]"}], "/.", "sol"}], 
+              "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "n"}], "}"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", 
+             RowBox[{"-", "L"}], ",", "L"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"y", ",", 
+             RowBox[{"-", "L"}], ",", "L"}], "}"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+           RowBox[{"ColorFunction", "\[Rule]", 
+            RowBox[{"Function", "[", 
+             RowBox[{
+              RowBox[{"{", "intensity", "}"}], ",", 
+              RowBox[{"Blend", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"Transparent", ",", "Red"}], "}"}], ",", 
+                "intensity"}], "]"}]}], "]"}]}]}], "]"}], ",", 
+         RowBox[{"DensityPlot", "[", 
+          RowBox[{
+           RowBox[{"Sum", "[", 
+            RowBox[{
+             RowBox[{"First", "[", 
+              RowBox[{
+               RowBox[{
+                SubscriptBox["B", "i"], "[", 
+                RowBox[{"x", ",", "y", ",", "time"}], "]"}], "/.", "sol"}], 
+              "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "n"}], "}"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", 
+             RowBox[{"-", "L"}], ",", "L"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"y", ",", 
+             RowBox[{"-", "L"}], ",", "L"}], "}"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+           RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"ColorFunction", "\[Rule]", 
+            RowBox[{"Function", "[", 
+             RowBox[{
+              RowBox[{"{", "intensity", "}"}], ",", 
+              RowBox[{"Blend", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"Transparent", ",", "Blue"}], "}"}], ",", 
+                "intensity"}], "]"}]}], "]"}]}]}], "]"}]}], "}"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"DensityPlot", "[", 
        RowBox[{
-        RowBox[{"DensityPlot", "[", 
+        RowBox[{"Sum", "[", 
          RowBox[{
-          RowBox[{"Sum", "[", 
+          RowBox[{"First", "[", 
            RowBox[{
-            RowBox[{"First", "[", 
-             RowBox[{
-              RowBox[{
-               SubscriptBox["A", "i"], "[", 
-               RowBox[{"x", ",", "y", ",", "time"}], "]"}], "/.", "sol"}], 
-             "]"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"i", ",", "n"}], "}"}]}], "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"x", ",", 
-            RowBox[{"-", "L"}], ",", "L"}], "}"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"y", ",", 
-            RowBox[{"-", "L"}], ",", "L"}], "}"}], ",", 
-          RowBox[{"PlotRange", "\[Rule]", "All"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
-          RowBox[{"ColorFunction", "\[Rule]", 
-           RowBox[{"Function", "[", 
             RowBox[{
-             RowBox[{"{", "intensity", "}"}], ",", 
-             RowBox[{"Blend", "[", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{"Transparent", ",", "Red"}], "}"}], ",", 
-               "intensity"}], "]"}]}], "]"}]}]}], "]"}], 
-        "\[IndentingNewLine]", ",", 
-        RowBox[{"DensityPlot", "[", 
-         RowBox[{
-          RowBox[{"Sum", "[", 
-           RowBox[{
-            RowBox[{"First", "[", 
-             RowBox[{
-              RowBox[{
-               SubscriptBox["B", "i"], "[", 
-               RowBox[{"x", ",", "y", ",", "time"}], "]"}], "/.", "sol"}], 
-             "]"}], ",", 
-            RowBox[{"{", 
-             RowBox[{"i", ",", "n"}], "}"}]}], "]"}], ",", 
+             SubscriptBox["AB", 
+              RowBox[{"i", ",", "j"}]], "[", 
+             RowBox[{"x", ",", "y", ",", "time"}], "]"}], "/.", "sol"}], 
+           "]"}], ",", 
           RowBox[{"{", 
-           RowBox[{"x", ",", 
-            RowBox[{"-", "L"}], ",", "L"}], "}"}], ",", 
+           RowBox[{"i", ",", "n"}], "}"}], ",", 
           RowBox[{"{", 
-           RowBox[{"y", ",", 
-            RowBox[{"-", "L"}], ",", "L"}], "}"}], ",", 
-          RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
-          RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{"ColorFunction", "\[Rule]", 
-           RowBox[{"Function", "[", 
+           RowBox[{"j", ",", "n"}], "}"}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "L"}], ",", "L"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", 
+          RowBox[{"-", "L"}], ",", "L"}], "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", "All"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+        RowBox[{"ColorFunction", "\[Rule]", 
+         RowBox[{"Function", "[", 
+          RowBox[{
+           RowBox[{"{", "intensity", "}"}], ",", 
+           RowBox[{"Blend", "[", 
             RowBox[{
-             RowBox[{"{", "intensity", "}"}], ",", 
-             RowBox[{"Blend", "[", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{"Transparent", ",", "Blue"}], "}"}], ",", 
-               "intensity"}], "]"}]}], "]"}]}]}], "]"}]}], "}"}]}], 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
-     RowBox[{"{", 
-      RowBox[{"time", ",", "0", ",", "Tf", ",", 
-       RowBox[{"Tf", "/", "30"}]}], "}"}]}], "]"}]}]}]], "Input",
- CellChangeTimes->{{3.813712919675763*^9, 3.8137130019718857`*^9}, {
-  3.813713078307419*^9, 3.813713098104198*^9}, {3.8137131333136463`*^9, 
-  3.81371313965139*^9}, {3.813713663694235*^9, 3.813713768990739*^9}, {
-  3.8137138469767437`*^9, 3.813713888830319*^9}, {3.813713960334324*^9, 
-  3.8137139921818438`*^9}, {3.813714578904744*^9, 3.813714579165346*^9}},
- CellLabel->"In[90]:=",ExpressionUUID->"85a05b30-bf55-4e25-bc3b-584613e6edf1"]
+             RowBox[{"{", 
+              RowBox[{"Transparent", ",", "Green"}], "}"}], ",", 
+             "intensity"}], "]"}]}], "]"}]}]}], "]"}]}], "}"}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"time", ",", "0", ",", "Tf", ",", 
+      RowBox[{"Tf", "/", "10"}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.816141102954953*^9, 3.816141103825696*^9}, {
+   3.816141217926771*^9, 3.816141221314275*^9}, {3.816141348362928*^9, 
+   3.816141377979123*^9}, {3.8161414184930573`*^9, 3.816141440487953*^9}, {
+   3.8161414786437597`*^9, 3.816141511333457*^9}, 3.816141560492712*^9, {
+   3.816141603774878*^9, 3.816141620502172*^9}, {3.816141924431488*^9, 
+   3.8161419632406673`*^9}, {3.816142006375002*^9, 3.816142007090273*^9}, {
+   3.8161420627333117`*^9, 3.816142067638541*^9}, 3.816142126701625*^9, {
+   3.8161421643907623`*^9, 3.8161421693001547`*^9}, {3.8161430821475067`*^9, 
+   3.816143101758072*^9}, {3.816143243287397*^9, 3.816143244371737*^9}, {
+   3.8161432833230877`*^9, 3.8161432847455597`*^9}, {3.816144336996786*^9, 
+   3.816144337911972*^9}},ExpressionUUID->"401dd146-d911-4bc1-89d6-\
+fb15d30f5ccd"]
 },
 WindowSize->{Full, Full},
 WindowMargins->{{168, Automatic}, {Automatic, 43}},
+TaggingRules->{"TryRealOnly" -> False},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) \
 (2020\:5e746\:670822\:65e5)",
 StyleDefinitions->"Default.nb",
@@ -488,9 +537,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 11179, 279, 779, "Input",ExpressionUUID->"8c050eab-a361-4c30-b83f-5d61b0deb8a6"],
-Cell[11740, 301, 3402, 90, 221, "Input",ExpressionUUID->"a42fd996-3582-4090-93f9-f9a43ab0f75c"],
-Cell[15145, 393, 3191, 77, 217, "Input",ExpressionUUID->"85a05b30-bf55-4e25-bc3b-584613e6edf1"]
+Cell[558, 20, 11577, 285, 779, "Input",ExpressionUUID->"8c050eab-a361-4c30-b83f-5d61b0deb8a6"],
+Cell[12138, 307, 3406, 91, 221, "Input",ExpressionUUID->"a42fd996-3582-4090-93f9-f9a43ab0f75c"],
+Cell[15547, 400, 4976, 118, 392, "Input",ExpressionUUID->"401dd146-d911-4bc1-89d6-fb15d30f5ccd"]
 }
 ]
 *)
