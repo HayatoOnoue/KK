@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     26642,        676]
-NotebookOptionsPosition[     25945,        657]
-NotebookOutlinePosition[     26395,        675]
-CellTagsIndexPosition[     26352,        672]
+NotebookDataLength[     27202,        691]
+NotebookOptionsPosition[     26505,        672]
+NotebookOutlinePosition[     26955,        690]
+CellTagsIndexPosition[     26912,        687]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -379,7 +379,21 @@ Cell[BoxData[{
        RowBox[{"i", ",", "n"}], "}"}], ",", 
       RowBox[{"{", 
        RowBox[{"j", ",", "n"}], "}"}]}], "]"}]}], ";"}], 
-  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Kamada", "-", 
+    "Kawai\:3067\:7528\:3044\:308b\:96a3\:63a5\:884c\:5217\:306f\:8ddd\:96e2\
+\:304c\:5927\:304d\:3044\:307b\:3069\:91cd\:307f\:3082\:5927\:304d\:3044\:5fc5\
+\:8981\:304c\:3042\:308b\:306e\:3067\:5404\:8981\:7d20\:3092\:9006\:6570\:306b\
+\:3059\:308b"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"matAB", "=", 
+   RowBox[{
+    RowBox[{"matAB", "^", 
+     RowBox[{"-", "1"}]}], "/.", 
+    RowBox[{"ComplexInfinity", "\[Rule]", "0"}]}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
     SubscriptBox["\:9802\:70b9\:3092A", "1"], ",", "...", ",", 
@@ -401,8 +415,7 @@ Cell[BoxData[{
        RowBox[{"{", 
         RowBox[{
          SuperscriptBox["matAB", "\[Transpose]"], ",", "0"}], "}"}]}], "}"}], 
-     "]"}]}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"adjMat", "//", "MatrixForm"}], "\[IndentingNewLine]"}], "Input",
+     "]"}]}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.8137123992111*^9, 3.8137124744407587`*^9}, {
    3.813712522574388*^9, 3.81371253499579*^9}, {3.813712625489262*^9, 
    3.8137126749894657`*^9}, {3.813712735376972*^9, 3.813712735998514*^9}, 
@@ -453,8 +466,9 @@ Cell[BoxData[{
    3.8161604899015617`*^9}, {3.816160570417612*^9, 3.81616059882557*^9}, {
    3.8161608051821413`*^9, 3.8161608086532183`*^9}, {3.816160924998068*^9, 
    3.816160968989594*^9}, {3.81616120005129*^9, 3.816161247147831*^9}, {
-   3.816161995975456*^9, 
-   3.816162000731064*^9}},ExpressionUUID->"8c050eab-a361-4c30-b83f-\
+   3.816161995975456*^9, 3.816162000731064*^9}, 3.8161663718945923`*^9, {
+   3.816166442057125*^9, 3.81616652245747*^9}, {3.816166609928583*^9, 
+   3.816166614279827*^9}},ExpressionUUID->"8c050eab-a361-4c30-b83f-\
 5d61b0deb8a6"],
 
 Cell[BoxData[
@@ -486,7 +500,7 @@ Cell[BoxData[
   3.816164701250683*^9, 3.8161647769063883`*^9}, {3.816164851346487*^9, 
   3.8161649268567247`*^9}, {3.816164993597556*^9, 3.816165013697774*^9}},
  CellLabel->
-  "In[175]:=",ExpressionUUID->"ee14f4cf-d1d6-4039-8fe0-52fbe20727b2"],
+  "In[209]:=",ExpressionUUID->"ee14f4cf-d1d6-4039-8fe0-52fbe20727b2"],
 
 Cell[BoxData[
  RowBox[{"ListPlot", "[", 
@@ -531,7 +545,7 @@ Cell[BoxData[
   3.816163125644452*^9, 3.816163132626801*^9}, {3.816163654033134*^9, 
   3.816163691349465*^9}, {3.816164787834076*^9, 3.81616481414242*^9}},
  CellLabel->
-  "In[167]:=",ExpressionUUID->"4339377e-297f-4339-b0e4-bc8b838a3d63"],
+  "In[210]:=",ExpressionUUID->"4339377e-297f-4339-b0e4-bc8b838a3d63"],
 
 Cell[BoxData[
  RowBox[{"ListAnimate", "[", 
@@ -653,7 +667,8 @@ Cell[BoxData[
    3.816144337911972*^9}, {3.8161471180912323`*^9, 3.816147118890853*^9}, 
    3.816147197896336*^9, {3.816156803413973*^9, 3.8161568048649063`*^9}, {
    3.816156859092382*^9, 3.816156910427058*^9}},
- CellLabel->"In[87]:=",ExpressionUUID->"401dd146-d911-4bc1-89d6-fb15d30f5ccd"]
+ CellLabel->
+  "In[211]:=",ExpressionUUID->"401dd146-d911-4bc1-89d6-fb15d30f5ccd"]
 },
 WindowSize->{Full, Full},
 WindowMargins->{{168, Automatic}, {Automatic, 43}},
@@ -674,10 +689,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 17370, 437, 1293, "Input",ExpressionUUID->"8c050eab-a361-4c30-b83f-5d61b0deb8a6"],
-Cell[17931, 459, 1164, 29, 109, "Input",ExpressionUUID->"ee14f4cf-d1d6-4039-8fe0-52fbe20727b2"],
-Cell[19098, 490, 1671, 43, 80, "Input",ExpressionUUID->"4339377e-297f-4339-b0e4-bc8b838a3d63"],
-Cell[20772, 535, 5169, 120, 392, "Input",ExpressionUUID->"401dd146-d911-4bc1-89d6-fb15d30f5ccd"]
+Cell[558, 20, 17926, 451, 1291, "Input",ExpressionUUID->"8c050eab-a361-4c30-b83f-5d61b0deb8a6"],
+Cell[18487, 473, 1164, 29, 109, "Input",ExpressionUUID->"ee14f4cf-d1d6-4039-8fe0-52fbe20727b2"],
+Cell[19654, 504, 1671, 43, 80, "Input",ExpressionUUID->"4339377e-297f-4339-b0e4-bc8b838a3d63"],
+Cell[21328, 549, 5173, 121, 392, "Input",ExpressionUUID->"401dd146-d911-4bc1-89d6-fb15d30f5ccd"]
 }
 ]
 *)
